@@ -7,7 +7,7 @@
 {% block content %}
     <section>
         <h1>Register a new user</h1>
-        <form class="custom-form" action="/users/register/" method="post">
+        <form class="custom-form" action="{% url 'users:register %}" method="post">
             {% csrf_token %}
             {{form}}
             <button>Submit</button>
